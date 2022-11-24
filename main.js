@@ -24,9 +24,10 @@ frontCube.position.y = 2
 
 scene.add(frontCube)
 
-const moonTexture = new THREE.TextureLoader().load("moon.png")
-const moonGeometry = new THREE.SphereGeometry(60 );
-const moonMaterial = new THREE.MeshBasicMaterial({ color: "gray", map: moonTexture });
+const moonTexture = new THREE.TextureLoader().load("moon wrap.png")
+const moon3dTexture = new THREE.TextureLoader().load("normal.jpg")
+const moonGeometry = new THREE.SphereGeometry(60, 100, 100);
+const moonMaterial = new THREE.MeshBasicMaterial({ color: "gray", map: moonTexture, normalMap: moon3dTexture });
 const moon = new THREE.Mesh( moonGeometry, moonMaterial)
 moon.position.z = -100
 

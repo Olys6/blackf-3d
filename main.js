@@ -16,8 +16,8 @@ camera.position.setZ(30);
 
 renderer.render( scene, camera );
 
-const frontBoxGeometry = new THREE.BoxGeometry( 5.5, 5.5, 5.5)
-const frontBoxMaterial = new THREE.MeshStandardMaterial({ color: "white" })
+const frontBoxGeometry = new THREE.BoxGeometry( 5.5, 5.5, 5.5, 1, 1, 1)
+const frontBoxMaterial = new THREE.MeshStandardMaterial({ color: "white", wireframe: true })
 const frontCube = new THREE.Mesh(frontBoxGeometry, frontBoxMaterial )
 frontCube.position.z = 4
 frontCube.position.y = 2
@@ -53,6 +53,10 @@ pointLight.position.set(0, frontCube.position.y + 5, 20)
 
 scene.add(pointLight)
 
+const ambientLight = new THREE.AmbientLight(0xffffff)
+
+scene.add(ambientLight)
+
 const lightHelper = new THREE.PointLightHelper(pointLight)
 // scene.add(lightHelper)
 
@@ -60,17 +64,16 @@ function animate() {
   requestAnimationFrame( animate );
 
   frontCube.rotation.x = 0.4
-  frontCube.rotation.y += 0.01
+  frontCube.rotation.y += 0.05
   if (frontCube.rotation.z < 0.1) {
-    frontCube.rotation.z += 0.02
+    frontCube.rotation.z += 0.05
   } else {
-    frontCube.rotation.z -= 0.09
+    frontCube.rotation.z -= 0.05
   }
   // cube.rotation.z += 0.01
 
-  // moon.rotation.x = 0.1
-  moon.rotation.y += 0.001
-  moon.rotation.z += 0.001
+  moon.rotation.y += 0.005
+  moon.rotation.z += 0.005
 
   renderer.render(scene, camera)
 }

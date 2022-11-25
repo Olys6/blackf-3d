@@ -5,6 +5,9 @@ canvas {
 }
 
 main {
-  font-family: 'Futura', sans-serif;
-  font-weight: bold;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.greenspaceBtn:hover {
+  transform: scale(1.1);
 }

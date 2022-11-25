@@ -2,22 +2,69 @@
 <html lang="en">
   <head>
 
+    <script src="https://kit.fontawesome.com/c1393db622.js" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@800&family=Open+Sans:ital,wght@0,600;1,600&display=swap"
+      rel="stylesheet">
 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+
+    <script type="text/javascript" src="evercookie.js"></script>
+    
+    <script>
+      var ec = new evercookie();
+
+      // set a cookie "id" to "12345"
+      // usage: ec.set(key, value)
+      ec.set("id", "12345");
+
+      // retrieve a cookie called "id" (simply)
+      ec.get("id", function (value) { alert("Cookie value is " + value) });
+
+      // or use a more advanced callback function for getting our cookie
+      // the cookie value is the first param
+      // an object containing the different storage methods
+      // and returned cookie values is the second parameter
+      function getCookie(best_candidate, all_candidates) {
+        alert("The retrieved cookie is: " + best_candidate + "\n" +
+          "You can see what each storage mechanism returned " +
+          "by looping through the all_candidates object.");
+
+        for (var item in all_candidates)
+          document.write("Storage mechanism " + item +
+            " returned: " + all_candidates[item] + "<br>");
+      }
+      ec.get("id", getCookie);
+
+    // we look for "candidates" based off the number of "cookies" that
+    // come back matching since it's possible for mismatching cookies.
+    // the best candidate is most likely the correct one
+    </script>
   </head>
   <body>
     <canvas id="bg"></canvas>
 
     <script type="module" src="/main.js"></script>
 
-    <main>
-      <div style="position: absolute; top: 5vh; left: 33%; display: flex; flex-direction: column;">
+    <main >
+      <a class="greenspaceBtn" style="position: absolute; bottom: 10vw; right: 20px; z-index: 1;
+      color: white; background-color: #68cc04; 
+      width: 13rem; height: 5rem; font-size: 1.5rem;
+      text-decoration: none;
+      display: flex; justify-content: center; align-items: center; gap: 0.5rem;
+      border-radius: 50px; transition: .2s;" 
+      href="https://www.greenpeace.org/international/act/donate/"
+      >
+        <i class="fa-brands fa-envira"> </i><p>Greenspace</p>
+      </a>
+
+      <div style="position: absolute; top: 5vh; left: 33%;">
         <img src="logo.png" />
         <img style="margin-top: 10px;" src="subhead.png" />
       </div>
@@ -28,9 +75,11 @@
         <h2 style="font-size: 50px; line-height: 45px;">ABSOLUTELY <br />NOTHING </h2>
         <p style="font-size: 20px; margin-top: -35px;">WHILE STOCKS LAST</p>
         <h2 style="font-size: 50px; margin-top: -25px">£000</h2>
+  
+        <h2 id="result" style="font-size: 50px; margin-top: -50px"></h2>
       </div>
 
-      <img style="position: absolute; bottom: 5vw; left: 0;" src="consume.png" />
+      <img style="position: fixed; bottom: 5vw; left: 0;" src="consume.png" />
     </main>
 
   </body>

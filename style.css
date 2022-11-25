@@ -8,6 +8,40 @@ main {
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+#product {
+  width: 100vw;
+}
+
 .greenspaceBtn:hover {
   transform: scale(1.1);
+}
+
+.findOutMoreBtn {
+  transition: .2s;
+}
+
+.findOutMoreBtn:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  #titleAndSubhead {
+    width: 90% !important;
+  }
+  #buyNowStar {
+    display: none !important;;
+  }
+  #product {
+    bottom: 30vh !important;
+  }
+  #productTitle {
+    width: 90% !important;
+  }
+  #consumeBar {
+    display: none !important;
+  }
+  #footer {
+    margin-bottom: -10vw;
+    transform: scale(0.6);
+  }
 }

@@ -95,14 +95,14 @@ function addStar() {
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff })
   const star = new THREE.Mesh( geometry, material )
 
-  const [x, y] = new Array(2).fill().map(() => THREE.MathUtils.randFloatSpread(160) );
+  const [x, y] = new Array(2).fill().map(() => THREE.MathUtils.randFloatSpread(250) );
 
   star.position.set(x, y, -70);
   scene.add(star)
 
 }
 
-Array(300).fill().forEach(addStar)
+Array(500).fill().forEach(addStar)
 
 
 const pointLight = new THREE.PointLight(0xffffff)

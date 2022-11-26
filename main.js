@@ -137,7 +137,7 @@ function animate() {
   moon.rotation.y += 0.005
   moon.rotation.z += 0.005
 
-  moonCenter.rotation.z += 0.005
+  moonCenter.rotation.z += 0.01
 
   renderer.render(scene, camera)
 }

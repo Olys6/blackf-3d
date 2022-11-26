@@ -28,8 +28,7 @@ camera.position.setZ(30);
 
 renderer.render( scene, camera );
 
-const moonTexture = new THREE.TextureLoader().load("moon wrap.png")
-const moon3dTexture = new THREE.TextureLoader().load("normal.jpg")
+const moonTexture = new THREE.TextureLoader().load("https://i.imgur.com/0wZ0YtF.png")
 const moonGeometry = new THREE.SphereGeometry(55, 100, 100);
 const moonMaterial = new THREE.MeshBasicMaterial({ color: "gray", map: moonTexture });
 const moon = new THREE.Mesh( moonGeometry, moonMaterial)

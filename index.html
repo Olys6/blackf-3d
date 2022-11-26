@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <script src="https://kit.fontawesome.com/c1393db622.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@800&family=Open+Sans:ital,wght@0,600;1,600&display=swap"
+      rel="stylesheet">
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    
+    <script type="module" crossorigin src="/assets/index.dcd332a9.js"></script>
+    <link rel="stylesheet" href="/assets/index.775a6647.css">
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+
+    
+
+    <main style="display: block;">
+
+      <!-- <a class="greenspaceBtn" style="position: absolute; bottom: 20px; right: 20px; z-index: 1;
+      color: white; background-color: #68cc04; 
+      width: 13rem; height: 5rem; font-size: 1.5rem;
+      text-decoration: none;
+      display: flex; justify-content: center; align-items: center; gap: 0.5rem;
+      border-radius: 50px; transition: .2s;" 
+      href="https://www.greenpeace.org/international/act/donate/"
+      >
+        <i class="fa-brands fa-envira"> </i><p>Greenspace</p>
+      </a> -->
+
+      <div id="titleAndSubhead" style="position: absolute; top: 5vh; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 99%">
+        <img style="width: inherit; max-width: fit-content;" src="/assets/logo.e9b8aede.png" />
+        <img style="width: inherit; max-width: fit-content; margin-top: 10px;" src="data:image/png;base64,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" />
+      </div>
+
+      <img id="buyNowStar" style="position: absolute; top: 22vh; right: 15vw" src="/assets/star.19749163.png" />
+
+      <div id="product" style="position: absolute; bottom: 27vw; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; color: white; width: 99%; text-align: center;">
+            <h2 id="productTitle" style="font-size: 5vw; line-height: 4.5vw; width: 28rem;">ABSOLUTELY <br />NOTHING </h2>
+            <p style="font-size: 2vw; margin-top: -3.5vw;">WHILE STOCKS LAST</p>
+            <h2 style="font-size: 5vw; margin-top: -2.5vw">£000</h2>
+      </div>
+
+      <img id="consumeBar" style="position: fixed; bottom: 12rem; left: 0;" src="/assets/consume.7fde8c13.png" />
+      <footer id="footer" style="position: absolute; bottom: 1vh; display: flex; align-items: center; justify-content: center; flex-direction: column; color: white; width: 99%;">
+        <h2 style="text-align: center;">INSTEAD OF THROWING YOUR MONEY AWAY ON THINGS YOU DON'T NEED, <br/> CONTRIBUTE TO SOMETHING WORTHWHILE...</h2>
+        <a href="https://www.greenpeace.org/international/act/donate/"><img class="findOutMoreBtn" src="/assets/button.d16f9690.png" /></a>
+      </footer>
+    </main>
+
+  </body>
+</html>
